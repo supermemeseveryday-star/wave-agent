@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap");
+:root {
+  color-scheme: dark;
+  font-family: "DM Sans", sans-serif;
+  background: #0b0f13;
+  color: #e9edf0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+aside {
+  width: 244px;
+  background: #10161a;
+  border-right: 1px solid #283238;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0 auto 0 0;
+}
+.brand {
+  height: 96px;
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  padding: 0 25px;
+  border-bottom: 1px solid #283238;
+}
+.brand strong {
+  font-size: 20px;
+  letter-spacing: 0.22em;
+}
+.brand small {
+  display: block;
+  color: #73818a;
+  font: 9px "DM Mono";
+  letter-spacing: 0.09em;
+  margin-top: 5px;
+}
+.mark {
+  font-size: 33px;
+  color: #bdf56c;
+}
+.nav {
+  padding: 24px 12px;
+  display: grid;
+  gap: 4px;
+}
+.nav button {
+  appearance: none;
+  text-align: left;
+  background: none;
+  color: #88969e;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font: 500 13px "DM Sans";
+  cursor: pointer;
+}
+.nav button:hover,
+.nav .active {
+  color: #e8f7d8;
+  background: #1c2a22;
+}
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #607078;
+  border-radius: 50%;
+  margin-right: 13px;
+}
+.active .dot {
+  background: #bdf56c;
+  border-color: #bdf56c;
+}
+.sidefoot {
+  margin-top: auto;
+  padding: 25px;
+  color: #789087;
+  border-top: 1px solid #283238;
+  font: 10px "DM Mono";
+  letter-spacing: 0.05em;
+}
+.sidefoot small {
+  display: block;
+  margin: 10px 0 0 18px;
+  color: #536169;
+}
+.live {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #bdf56c;
+  box-shadow: 0 0 10px #bdf56c;
+  margin-right: 8px;
+}
+main {
+  margin-left: 244px;
+  width: calc(100% - 244px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  height: 113px;
+  padding: 28px 50px;
+  border-bottom: 1px solid #283238;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  margin: 3px 0;
+  font-size: 28px;
+  font-weight: 500;
+}
+.eyebrow {
+  font: 10px "DM Mono";
+  letter-spacing: 0.13em;
+  color: #8fa77e;
+}
+.status {
+  font: 10px "DM Mono";
+  letter-spacing: 0.08em;
+  color: #b0beb4;
+  border: 1px solid #314138;
+  border-radius: 20px;
+  padding: 9px 14px;
+}
+.conversation {
+  width: min(780px, 90%);
+  margin: 0 auto;
+  flex: 1;
+  padding: 50px 0 30px;
+}
+.intro {
+  text-align: center;
+  margin: 14vh 0 70px;
+}
+.orb {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  border: 1px solid #668050;
+  color: #bdf56c;
+  margin: auto auto 25px;
+  font-size: 48px;
+  line-height: 66px;
+  box-shadow: 0 0 70px #9bc45e22;
+  background: #1e2b20;
+}
+.intro h2 {
+  font-size: 35px;
+  font-weight: 500;
+  margin: 10px;
+}
+.intro > p:last-child {
+  color: #87949a;
+  font-size: 14px;
+}
+.exchange {
+  margin: 35px 0;
+  border-bottom: 1px solid #273136;
+  padding-bottom: 30px;
+}
+.exchange span {
+  font: 10px "DM Mono";
+  color: #8ca58a;
+  letter-spacing: 0.11em;
+}
+.exchange p {
+  line-height: 1.7;
+}
+.user {
+  padding: 16px 20px;
+  background: #172027;
+  border-radius: 10px;
+}
+.user p {
+  margin: 8px 0 0;
+}
+.agent {
+  padding: 22px 20px;
+}
+.agent em {
+  font-style: normal;
+  color: #596f61;
+  margin-left: 12px;
+}
+.agent small {
+  font: 10px "DM Mono";
+  color: #64737a;
+}
+.agent pre {
+  overflow: auto;
+  background: #11191d;
+  padding: 15px;
+  border-radius: 8px;
+}
+.progress {
+  padding: 18px;
+  color: #bdf56c;
+  font: 12px "DM Mono";
+  line-height: 2;
+}
+.pulse {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #bdf56c;
+}
+.err {
+  color: #ff9189;
+}
+.composer {
+  position: sticky;
+  bottom: 0;
+  background: linear-gradient(transparent, #0b0f13 15%);
+  padding: 18px max(5%, calc((100% - 780px) / 2)) 28px;
+}
+.composer textarea {
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
+  background: #171f22;
+  color: #f2f5ef;
+  border: 1px solid #3a4a45;
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  padding: 17px 20px;
+  font: 14px "DM Sans";
+  outline: none;
+}
+.composer textarea:focus {
+  border-color: #7ca45b;
+}
+.composer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #3a4a45;
+  border-top: 0;
+  background: #171f22;
+  border-radius: 0 0 10px 10px;
+  padding: 8px 10px 8px 20px;
+}
+.composer span {
+  font: 9px "DM Mono";
+  color: #607078;
+}
+.composer button {
+  background: #bdf56c;
+  color: #172116;
+  border: 0;
+  padding: 11px 23px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.composer button:disabled {
+  opacity: 0.4;
+}
+.panel {
+  padding: 35px 50px;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 35px;
+}
+.metrics div {
+  background: #141b1d;
+  border: 1px solid #283238;
+  padding: 18px;
+  border-radius: 8px;
+}
+.metrics small {
+  display: block;
+  color: #7d9285;
+  font: 10px "DM Mono";
+}
+.metrics strong {
+  display: block;
+  font-size: 28px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+.list article {
+  border-bottom: 1px solid #283238;
+  padding: 20px 0;
+}
+.list b {
+  font-weight: 500;
+}
+.list span {
+  float: right;
+  color: #bdf56c;
+  font: 10px "DM Mono";
+  text-transform: uppercase;
+}
+.list p,
+.list pre {
+  color: #8c9b9c;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+.empty {
+  padding: 60px;
+  text-align: center;
+  color: #718087;
+}
+@media (max-width: 750px) {
+  aside {
+    width: 64px;
+  }
+  .brand {
+    padding: 0 14px;
+  }
+  .brand div,
+  .nav button {
+    font-size: 0;
+  }
+  .nav button {
+    padding: 14px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+  .sidefoot {
+    font-size: 0;
+  }
+  main {
+    margin-left: 64px;
+    width: calc(100% - 64px);
+  }
+  header {
+    padding: 25px;
+  }
+  .status {
+    display: none;
+  }
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .panel {
+    padding: 20px;
+  }
+  .composer span {
+    display: none;
+  }
+}
+
+.scroll-end {
+  height: 170px;
+}
